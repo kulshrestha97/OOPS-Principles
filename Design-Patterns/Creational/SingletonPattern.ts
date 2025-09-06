@@ -7,9 +7,7 @@
 // otherwise assigns the Singleton instance to the private member and returns that.
 class Singleton {
     private static instance: Singleton;
-    private constructor() {
-        
-    }
+    private constructor() {}
     public static getInstance() {
         if(!Singleton.instance) {
             Singleton.instance = new Singleton();    
@@ -22,5 +20,4 @@ const s1 = Singleton.getInstance();
 const s2 = Singleton.getInstance();
 if(s1===s2) {
     console.log("They point towards same instances");
-    
 }
